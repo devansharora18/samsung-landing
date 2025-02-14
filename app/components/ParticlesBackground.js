@@ -5,14 +5,14 @@ import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
 import particlesConfig from "./config/particles-config";
 
-const ParticlesBackground = ({ onBlackholeComplete }) => {
+const ParticlesBackground = ({ onLoadingComplete }) => {
   const [isBlack, setIsBlack] = useState(false);
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsBlack(true);
-      setTimeout(() => onBlackholeComplete(), 1000);
-    }, 4000); // Adjust timing to match absorber effect
+      setTimeout(() => onLoadingComplete(), 500);
+    }, 3000);
 
     return () => clearTimeout(timer);
   }, []);

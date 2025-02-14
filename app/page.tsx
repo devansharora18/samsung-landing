@@ -9,18 +9,23 @@ export default function Home() {
 
   return (
     <div className="relative w-full h-screen bg-black flex justify-center items-center">
-      {!showWelcome ? (
-        <ParticlesBackground onBlackholeComplete={() => setShowWelcome(true)} />
-      ) : (
-        <div className="flex justify-center items-center h-screen fade-in">
-          <h1 className="text-white text-4xl md:text-6xl font-bold tracking-wide">
-            Welcome to Samsung Galaxy
-          </h1>
+      {showWelcome && (
+        <div className="absolute top-0 left-0 w-full z-50">
+          <Navbar />
         </div>
       )}
-      <div className="absolute top-0 left-0 w-full">
-        <Navbar />
-      </div>
+      {!showWelcome ? (
+        <ParticlesBackground onLoadingComplete={() => setShowWelcome(true)} />
+      ) : (
+        <div className="flex flex-col justify-center items-center h-screen fade-in">
+          <div className="text-white text-4xl md:text-6xl font-bold tracking-wide">
+            Welcome to Samsung Galaxy
+          </div>
+		  <div className="text-white text-2xl md:text-4xl font-bold tracking-wide">
+			Into the Future
+		  </div>
+        </div>
+      )}
     </div>
   );
 }
