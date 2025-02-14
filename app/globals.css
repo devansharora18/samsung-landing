@@ -1,20 +1,27 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
 
 body {
-  color: var(--foreground);
-  background: var(--background);
+  background: black;
   font-family: Poppins;
 }
+
+::-webkit-scrollbar {
+	width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+	background: #111;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+	background: #444;
+	border-radius: 4px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+	background: #888;
+  }
+  

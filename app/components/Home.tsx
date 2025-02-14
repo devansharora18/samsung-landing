@@ -5,15 +5,17 @@ import Navbar from "./Navbar";
 
 export default function Home() {
   return (
-    <div className="relative w-full h-screen bg-gradient-to-b from-black via-gray-900 to-black flex justify-center items-center overflow-hidden">
-      <motion.div 
+	<div className="bg-gradient-to-b from-black via-gray-900 to-black">
+	<motion.div 
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.8 }}
-        className="absolute top-0 left-0 w-full z-50"
+        className=" top-0 left-0 w-full z-50"
       >
         <Navbar />
       </motion.div>
+    <div className="relative w-full h-screen flex justify-center items-center overflow-hidden">
+      
       <motion.div 
         initial={{ opacity: 0, scale: 0.85 }}
         animate={{ opacity: 1, scale: 1 }}
@@ -50,5 +52,6 @@ export default function Home() {
         </motion.div>
       </motion.div>
     </div>
+	</div>
   );
 }
