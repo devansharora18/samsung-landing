@@ -1,6 +1,7 @@
 "use client";
 
 import HomePage from "./components/Home";
+import RecommendedProducts from "./components/RecommendedProducts";
 import Shop from "./components/Shop";
 
 
@@ -9,6 +10,7 @@ export default function Home() {
     <div>
 		<HomePage />
 		<Shop />
+		<RecommendedProducts />
 	</div>
   );
 }
